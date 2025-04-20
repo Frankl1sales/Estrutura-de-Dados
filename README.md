@@ -1,4 +1,6 @@
-# Estruturas de Dados - Conceitos Iniciais
+# ![Descrição da imagem](figlandingpage.png)
+
+## Estruturas de Dados
 
 A linguagem de programação C é amplamente adotada nos primeiros anos da graduação em cursos de Ciência da Computação, Engenharia da Computação e áreas correlatas. Essa escolha não é aleatória: trata-se de uma linguagem que oferece uma base sólida para o aprendizado de conceitos fundamentais da computação, tanto do ponto de vista teórico quanto prático.
 
