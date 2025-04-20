@@ -1,0 +1,6 @@
+# Lista de figuras geometricas
+r 2.0 1.2
+c 5.8
+# t 1.23 12
+t 4 1.02
+c 5.1
