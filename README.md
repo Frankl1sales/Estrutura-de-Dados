@@ -52,6 +52,14 @@ A linguagem C, assim como Fortran e Pascal, é considerada uma linguagem “conv
 
 Um dos principais motivos para a adoção do C é a sua proximidade com o hardware. Como linguagem de baixo nível (quando comparada a linguagens modernas de alto nível, como Python ou Java), C permite que o estudante entenda como os dados são manipulados na memória, possibilitando o uso direto de ponteiros, controle de alocação dinâmica e acesso a endereços de memória. Segundo Arzani e Barbosa (2019), esse tipo de contato direto com a máquina proporciona uma compreensão mais profunda da arquitetura dos computadores e do funcionamento interno dos programas.
 
+## Contribuições
+
+Contribuições são bem-vindas! Para contribuir, faça um fork do repositório e envie um pull request com suas melhorias ou correções.
+
+## Licença
+
+Este projeto é licenciado sob a [MIT License](LICENSE.md).
+
 ## **Referências**  
 
 > ARZANI, Lucas Finistao; BARBOSA, Luciana L. da S. Um estudo sobre a linguagem de programação C: da academia para o mercado de trabalho. In: CONGRESSO DE INOVAÇÃO, CIÊNCIA E TECNOLOGIA DO IFSP, 10.; CONGRESSO DE PÓS-GRADUAÇÃO DO IFSP, 4., 2019, Sorocaba. Anais [...]. Sorocaba: IFSP, 2019.
