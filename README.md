@@ -1,4 +1,4 @@
-# ![Descrição da imagem](figlandingpage.png)
+# ![Descrição da imagem](Imagens/figlandingpage.png)
 
 ![C Language](https://img.shields.io/badge/LANGUAGE-C-blue)
 ![CMake](https://img.shields.io/badge/CMake-Yes-blue?style=flat&logo=cmake)
