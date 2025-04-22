@@ -1,0 +1,3 @@
+/media/frank/URUBUTURBO/PESQUISA/AED1/PACOTE-CMAKE/build/CMakeFiles/meu_projeto.dir
+/media/frank/URUBUTURBO/PESQUISA/AED1/PACOTE-CMAKE/build/CMakeFiles/edit_cache.dir
+/media/frank/URUBUTURBO/PESQUISA/AED1/PACOTE-CMAKE/build/CMakeFiles/rebuild_cache.dir
