@@ -218,3 +218,48 @@ void start_sorting(GtkButton *button, gpointer user_data) {
     // Após a execução do algoritmo de ordenação (seja qual for), essa linha solicita que a área de desenho seja redesenhada
     gtk_widget_queue_draw(drawing_area);
 }
+
+int main(int argc, char *argv[]) {
+    gtk_init(&argc, &argv); // Inicializa o GTK, preparando o ambiente gráfico para o uso da biblioteca 
+
+    srand(time(NULL)); // Inicializa o gerador de números aleatórios
+    // usa o tempo atual como semente para garantir que a sequência de números gerados 
+    // seja diferente a cada execução do programa
+
+    GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL); // cria uma janela de nível superior 
+    gtk_window_set_title(GTK_WINDOW(window), "Simulador de Algoritmos de Ordenação"); // o título da janela
+    gtk_window_set_default_size(GTK_WINDOW(window), 800, 600); // define o tamanho inicial da janela 
+    g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL); // faz o programa terminar quando a janela é fechada -  conecta o evento de "destruição" (fechamento da janela) ao gtk_main_quit
+
+    GtkWidget *vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 5); // Cria um contêiner do tipo caixa vertical (VBox) e adiciona-o à janela principal.
+    gtk_container_add(GTK_CONTAINER(window), vbox);
+
+    // Componente ComboBox para selecionar o algoritmo
+    // Cria um ComboBox (caixa de combinação) onde o usuário pode selecionar o algoritmo de ordenação
+    GtkWidget *combo_box = gtk_combo_box_text_new();
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo_box), "BubbleSort");
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo_box), "MergeSort");
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo_box), "QuickSort");
+    gtk_box_pack_start(GTK_BOX(vbox), combo_box, FALSE, FALSE, 0);
+
+    // Botão para iniciar a ordenação
+    // Cria um botão com o rótulo "Iniciar Ordenação" e o adiciona à caixa vertical
+    GtkWidget *button = gtk_button_new_with_label("Iniciar Ordenação");
+    gtk_box_pack_start(GTK_BOX(vbox), button, FALSE, FALSE, 0);
+    g_signal_connect(button, "clicked", G_CALLBACK(start_sorting), combo_box);
+
+    // Área de desenho para visualização
+    // onde os números ordenados serão visualizados graficamente
+    drawing_area = gtk_drawing_area_new();
+    gtk_widget_set_size_request(drawing_area, 800, 400);
+    gtk_box_pack_start(GTK_BOX(vbox), drawing_area, TRUE, TRUE, 0);
+    g_signal_connect(drawing_area, "draw", G_CALLBACK(on_draw), NULL);
+
+    // Exibe a janela e todos os widgets (botões, ComboBox, área de desenho) adicionados a ela
+    gtk_widget_show_all(window);
+    // Entra no loop de eventos principal do GTK
+    // sso permite que a interface gráfica fique ativa e interaja com o usuário até que a janela seja fechada
+    gtk_main();
+
+    return 0;
+}
