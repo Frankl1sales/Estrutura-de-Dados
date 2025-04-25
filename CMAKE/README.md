@@ -1,4 +1,4 @@
-# Meu Projeto C com CMake
+# OláMundo - Projeto C com CMake
 
 Este é um exemplo básico de um projeto em C configurado com o CMake. O projeto simplesmente imprime "Olá, mundo!" na tela.
 
