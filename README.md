@@ -10,31 +10,29 @@
 ---
 
 ## 📁 Estrutura do Repositório
-
+[](Conceitos-Fundamentais)
 A estrutura deste repositório foi inspirada nos capítulos da apostila Estruturas de Dados, desenvolvida por [Celes e Rangel (2002)](https://www-usr.inf.ufsm.br/~juvizzotto/elc1067-2013b/estrut-dados-pucrio.pdf). Embora nem todos os tópicos da apostila estejam presentes, a organização dos diretórios e arquivos segue a lógica dos conceitos abordados na obra, facilitando o estudo e a compreensão dos principais temas de estruturas de dados.
-
+1
 ```c
 📦 Estrutura de Dados em C
-├── 📂 1. Conceitos Fundamentais
-├── 📂 2. Expressões
-├── 📂 3. Controle de Fluxo
-├── 📂 4. Funções
-├── 📂 5. Vetores e Alocação Dinâmica
-├── 📂 7. Tipos de Estruturas 
-├── 📂 8. Matrizes
-├── 📂 9. Tipos Abstratos de Dados
-├── 📂 10. Lista Encadeada
-├── 📂 11. Pilhas
-├── 📂 12. Filas
-├── 📂 13. Árvores
-├── 📂 14. Arquivos
-├── 📂 15. Ordenação
-├── 📂 16. Busca
-├── 📂 17. Tabela de Dispersão
+├── 📂 Conceitos Fundamentais 
+├── 📂 Expressões 
+├── 📂 Controle de Fluxo 
+├── 📂 Funções
+├── 📂 Vetores e Alocação Dinâmica
+├── 📂 Tipos de Estruturas
+├── 📂 Matrizes 
+├── 📂 Tipos Abstratos
+├── 📂 Lista Encadeada
+├── 📂 Pilhas
+├── 📂 Fila 
+├── 📂 Árvores 
+├── 📂 Arquivos 
+├── 📂 Ordenação
+├── 📂 Busca
+├── 📂 Tabela de Dispersão
 └── 📄 README.md
 ```
-
-Para iniciar é recomendado estudar ou revisitar quando for necessário as pastas [GCC](GCC) e [Cmake](CMAKE) para um entendimento inicial sobre compilação de arquivos C. Logo depois é válido seguir a ordem proposta na [apostila](https://www-usr.inf.ufsm.br/~juvizzotto/elc1067-2013b/estrut-dados-pucrio.pdf).
 
 ---
 
