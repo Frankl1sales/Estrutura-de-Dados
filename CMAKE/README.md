@@ -14,10 +14,12 @@ sudo apt-get install cmake
 
 Depois de garantir que o CMake está instalado, crie uma pasta para os arquivos de build e execute o CMake:
 
+```bash
 mkdir build
 cd build
 cmake ..
 make
+```
 
 ### Passo 2: Executar o Programa
 
