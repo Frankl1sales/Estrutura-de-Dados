@@ -133,9 +133,9 @@ void merge(int arr[], int l, int m, int r) {
 // O objetivo de merge sort é aplicar recursivamente a lógica do Merge Sort
 void merge_sort(int arr[], int l, int r) {
     if (l < r) {
-        int m = l + (r - l) / 2;
-        merge_sort(arr, l, m);
-        merge_sort(arr, m + 1, r);
-        merge(arr, l, m, r);
+        int m = l + (r - l) / 2; // divide o array ao meio
+        merge_sort(arr, l, m); // aplica merge_sort() na metade da esquerda
+        merge_sort(arr, m + 1, r); // aplica merge_sort() na metade da direita
+        merge(arr, l, m, r); // combina (merge) as duas metades
     }
 }
