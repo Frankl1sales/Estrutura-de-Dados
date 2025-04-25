@@ -62,3 +62,80 @@ void update_display() {
     }
     usleep(50000); // Pausa de 50 milissegundos para visualização 
 }
+
+// ordena os elementos do vetor numbers[] em ordem crescente, mostrando a ordenação passo a passo na tela
+void bubble_sort() {
+    is_sorting = TRUE; // Define que a ordenação está em andamento  - Isso muda a cor das barras no on_draw()
+    
+    // O primeiro for controla as passagens no vetor
+    for (int i = 0; i < SIZE - 1; i++) {
+        // O segundo for compara pares de elementos adjacentes
+        for (int j = 0; j < SIZE - i - 1; j++) {
+            // Se o elemento atual é maior que o próximo, eles são trocados
+            if (numbers[j] > numbers[j + 1]) {
+                swap(&numbers[j], &numbers[j + 1]);
+                gtk_widget_queue_draw(drawing_area); // gtk_widget_queue_draw() solicita que a drawing_area (área de desenho) seja redesenhada
+                update_display(); // força a interface a mostrar a troca imediatamente
+            }
+        }
+    }
+    
+    is_sorting = FALSE; // A ordenação terminou - isso as barras voltam a ser desenhadas com a cor azul
+}
+// MERGE SORT
+//   Divide o array recursivamente em duas metades
+//   Ordena cada metade separadamente
+
+//   Junta (merge) as duas metades ordenadas em uma única sequência ordenada
+void merge(int arr[], int l, int m, int r) {
+    
+    // dois subarrays
+    int n1 = m - l + 1;
+    int n2 = r - m;
+
+    // Cria arrays temporários L e R
+    int L[n1], R[n2];
+   
+    //Copia os dados do array principal arr[] para os subarrays
+    for (int i = 0; i < n1; i++)
+        L[i] = arr[l + i];
+    for (int i = 0; i < n2; i++)
+        R[i] = arr[m + 1 + i];
+
+    // Compara os elementos de L e R
+    // oloca o menor no array arr[]
+    int i = 0, j = 0, k = l;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i++];
+        } else {
+            arr[k] = R[j++];
+        }
+        k++;
+        // Atualiza a tela com gtk_widget_queue_draw() e update_display() para mostrar o processo
+        gtk_widget_queue_draw(drawing_area);
+        update_display();
+    }
+
+    // Se ainda restarem elementos em L ou R, eles são copiados
+    while (i < n1) {
+        arr[k++] = L[i++];
+        gtk_widget_queue_draw(drawing_area);
+        update_display();
+    }
+    while (j < n2) {
+        arr[k++] = R[j++];
+        gtk_widget_queue_draw(drawing_area);
+        update_display();
+    }
+}
+
+// O objetivo de merge sort é aplicar recursivamente a lógica do Merge Sort
+void merge_sort(int arr[], int l, int r) {
+    if (l < r) {
+        int m = l + (r - l) / 2;
+        merge_sort(arr, l, m);
+        merge_sort(arr, m + 1, r);
+        merge(arr, l, m, r);
+    }
+}
