@@ -190,16 +190,18 @@ void start_sorting(GtkButton *button, gpointer user_data) {
     // que contém o nome do algoritmo de ordenação escolhido pelo usuário
     const char *selected_algo = gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(user_data)); // O parâmetro user_data é passado pela função de callback do GTK, e, neste caso, refere-se ao widget ComboBox.
 
+    // Se nenhum algoritmo for selecionado
+    // a função imprime um erro e retorna sem fazer nada
     if (selected_algo == NULL) {
         printf("[ERRO] Nenhum algoritmo selecionado.\n");
         return;
     }
 
-    generate_numbers();
-    gtk_widget_queue_draw(drawing_area);
-    update_display();
+    generate_numbers(); // é chamada para preencher o array numbers com valores aleatórios 
+    gtk_widget_queue_draw(drawing_area); // solicita ao GTK que redesenhe a área de desenho (drawing_area)
+    update_display(); //  atualiza a interface e mostrar os números gerados ao usuário
 
-    if (g_strcmp0(selected_algo, "BubbleSort") == 0) {
+    if (g_strcmp0(selected_algo, "BubbleSort") == 0) { // Se for o BubbleSort chama a função bubble_sort(); ... e assim vai
         bubble_sort();
     } else if (g_strcmp0(selected_algo, "MergeSort") == 0) {
         is_sorting = TRUE;
@@ -212,6 +214,7 @@ void start_sorting(GtkButton *button, gpointer user_data) {
     } else {
         printf("[ERRO] Algoritmo desconhecido!\n");
     }
-    
+
+    // Após a execução do algoritmo de ordenação (seja qual for), essa linha solicita que a área de desenho seja redesenhada
     gtk_widget_queue_draw(drawing_area);
 }
