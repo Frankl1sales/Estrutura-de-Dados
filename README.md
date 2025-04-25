@@ -13,7 +13,7 @@
 [](Conceitos-Fundamentais)
 A estrutura deste repositório foi inspirada nos capítulos da apostila Estruturas de Dados, desenvolvida por [Celes e Rangel (2002)](https://www-usr.inf.ufsm.br/~juvizzotto/elc1067-2013b/estrut-dados-pucrio.pdf). Embora nem todos os tópicos da apostila estejam presentes, a organização dos diretórios e arquivos segue a lógica dos conceitos abordados na obra, facilitando o estudo e a compreensão dos principais temas de estruturas de dados.
 
-```c
+
 📦 Estrutura de Dados em C
 ├── 📂 Conceitos Fundamentais 
 ├── 📂 Expressões 
@@ -32,7 +32,7 @@ A estrutura deste repositório foi inspirada nos capítulos da apostila Estrutur
 ├── 📂 Busca
 ├── 📂 Tabela de Dispersão
 └── 📄 README.md
-```
+
 
 ---
 
