@@ -18,7 +18,7 @@ A estrutura deste repositório foi inspirada nos capítulos da apostila Estrutur
 ├── 📂 Arquivos
 ├── 📂 Árvores
 ├── 📂 Busca
-├── 📂 [Conceitos Fundamentais](Conceitos Fundamentais)
+├── 📂 [Conceitos Fundamentais](Conceitos%20Fundamentais)
 ├── 📂 Controle de Fluxo
 ├── 📂 Expressões
 ├── 📂 Fila
