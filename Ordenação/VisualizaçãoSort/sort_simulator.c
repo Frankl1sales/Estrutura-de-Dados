@@ -180,3 +180,38 @@ void quick_sort(int arr[], int low, int high) {
         quick_sort(arr, pi + 1, high);
     }
 }
+// A função start_sorting() é um dos pontos principais para iniciar a ordenação dos números escolhidos pelo usuário, 
+// baseando-se em uma seleção feita na interface gráfica. Ela é chamada quando o usuário clica 
+// em um botão para começar a ordenação.
+void start_sorting(GtkButton *button, gpointer user_data) {
+    if (is_sorting) return; // Isso evita que múltiplos algoritmos sejam executados ao mesmo tempo
+    
+    // retorna o texto do item selecionado em um ComboBox, 
+    // que contém o nome do algoritmo de ordenação escolhido pelo usuário
+    const char *selected_algo = gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(user_data)); // O parâmetro user_data é passado pela função de callback do GTK, e, neste caso, refere-se ao widget ComboBox.
+
+    if (selected_algo == NULL) {
+        printf("[ERRO] Nenhum algoritmo selecionado.\n");
+        return;
+    }
+
+    generate_numbers();
+    gtk_widget_queue_draw(drawing_area);
+    update_display();
+
+    if (g_strcmp0(selected_algo, "BubbleSort") == 0) {
+        bubble_sort();
+    } else if (g_strcmp0(selected_algo, "MergeSort") == 0) {
+        is_sorting = TRUE;
+        merge_sort(numbers, 0, SIZE - 1);
+        is_sorting = FALSE;
+    } else if (g_strcmp0(selected_algo, "QuickSort") == 0) {
+        is_sorting = TRUE;
+        quick_sort(numbers, 0, SIZE - 1);
+        is_sorting = FALSE;
+    } else {
+        printf("[ERRO] Algoritmo desconhecido!\n");
+    }
+    
+    gtk_widget_queue_draw(drawing_area);
+}
