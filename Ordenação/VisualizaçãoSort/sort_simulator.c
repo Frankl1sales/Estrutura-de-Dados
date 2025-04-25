@@ -139,3 +139,44 @@ void merge_sort(int arr[], int l, int r) {
         merge(arr, l, m, r); // combina (merge) as duas metades
     }
 }
+
+//  QUICK SORT
+
+// partition tem o objetivo de reorganizar os elementos do array em torno de um pivô e retornar o índice final do pivô
+int partition(int arr[], int low, int high) {
+    int pivot = arr[high]; // Escolhe o último elemento como pivô
+    int i = low - 1; // i vai marcar o "fim da região de elementos menores que o pivô"
+
+    // Percorre o array de low até high - 1
+    // Se encontrar elemento menor que o pivô, incrementa i e faz o swap
+    for (int j = low; j < high; j++) {
+        if (arr[j] < pivot) {
+            i++;
+            swap(&arr[i], &arr[j]);
+            // Cada swap é visualizado com gtk_widget_queue_draw() e update_display() 
+            gtk_widget_queue_draw(drawing_area);
+            update_display();
+        }
+    }
+    // Coloca o pivô na posição correta: entre os menores e os maiores
+    swap(&arr[i + 1], &arr[high]);
+    // Atualiza a tela depois do último swap (pivô)
+    gtk_widget_queue_draw(drawing_area);
+    update_display();
+    // retorna a posição final do pivô, que será usada na recursão do quick_sort.
+    return i + 1;
+}
+
+// Aplicar recursivamente o Quick Sort dividindo o array com base na posição do pivô
+void quick_sort(int arr[], int low, int high) {
+    // verifica se ainda há mais de um elemento a ordenar (low < high).
+    if (low < high) {
+        // Chama partition() para posicionar o pivô corretamente
+        int pi = partition(arr, low, high);
+        // Aplica quick_sort() nas duas metades:
+        // antes do pivô (low até pi - 1)
+        quick_sort(arr, low, pi - 1);
+        //depois do pivô (pi + 1 até high)
+        quick_sort(arr, pi + 1, high);
+    }
+}
