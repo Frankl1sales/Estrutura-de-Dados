@@ -4,31 +4,24 @@ Este é um exemplo básico de um projeto em C configurado com o CMake. O projeto
 
 ## Como Usar
 
-### Passo 1: Clonar o repositório
-
-Se você ainda não fez o clone do repositório, faça isso executando o seguinte comando:
-
-```bash
-git clone https://github.com/seu_usuario/meu_projeto.git
-```
-
-### Passo 2: Compilar o Projeto
+### Passo 1: Compilar o Projeto
 
 Para compilar o projeto, você precisa ter o CMake instalado. Se não tiver o CMake, pode instalá-lo com o seguinte comando (em distribuições baseadas no Debian):
 
+```bash
 sudo apt-get install cmake
+```
 
 Depois de garantir que o CMake está instalado, crie uma pasta para os arquivos de build e execute o CMake:
 
-cd meu_projeto
 mkdir build
 cd build
 cmake ..
 make
 
-### Passo 3: Executar o Programa
+### Passo 2: Executar o Programa
 
-Depois de compilar, você pode executar o programa com o seguinte comando:
+Depois de compilar, você pode executar o programa com o seguinte comando na pasta build:
 
 ```bash
 ./meu_projeto
