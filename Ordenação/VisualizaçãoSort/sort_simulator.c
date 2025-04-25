@@ -11,6 +11,14 @@ int numbers[SIZE]; // vetor de inteiros que armazena os valores
 GtkWidget *drawing_area; // área gráfica onde as barras serão desenhadas 
 gboolean is_sorting = FALSE; // flag booleana que indica se a ordenação está em andamento 
 
+void generate_numbers() {
+    printf("[LOG] Gerando números aleatórios...\n");
+    for (int i = 0; i < SIZE; i++) {
+        numbers[i] = rand() % 500 + 1;
+    }
+    printf("[LOG] Números gerados com sucesso.\n");
+}
+
 static gboolean on_draw(GtkWidget *widget, cairo_t *cr, gpointer user_data) // Essa função é chamada automaticamente toda vez que a interface precisa ser redesenhada
 {   
     //  tamanho da área de desenho

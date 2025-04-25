@@ -1,0 +1,3 @@
+/media/frank/URUBUTURBO/PESQUISA/AED1/Ordenação/VisualizaçãoSort/build/CMakeFiles/sort_simulator.dir
+/media/frank/URUBUTURBO/PESQUISA/AED1/Ordenação/VisualizaçãoSort/build/CMakeFiles/edit_cache.dir
+/media/frank/URUBUTURBO/PESQUISA/AED1/Ordenação/VisualizaçãoSort/build/CMakeFiles/rebuild_cache.dir
