@@ -10,27 +10,27 @@
 ---
 
 ## 📁 Estrutura do Repositório
-[Conceitos Fundamentais](Conceitos-Fundamentais)
+[](Conceitos-Fundamentais)
 A estrutura deste repositório foi inspirada nos capítulos da apostila Estruturas de Dados, desenvolvida por [Celes e Rangel (2002)](https://www-usr.inf.ufsm.br/~juvizzotto/elc1067-2013b/estrut-dados-pucrio.pdf). Embora nem todos os tópicos da apostila estejam presentes, a organização dos diretórios e arquivos segue a lógica dos conceitos abordados na obra, facilitando o estudo e a compreensão dos principais temas de estruturas de dados.
 
 ```c
-📦 AED1
-├── 📂 Arquivos
-├── 📂 Árvores
-├── 📂 Busca
-├── 📂 
-├── 📂 Controle de Fluxo
-├── 📂 Expressões
-├── 📂 Fila
+📦 Estrutura de Dados em C
+├── 📂 Conceitos Fundamentais 
+├── 📂 Expressões 
+├── 📂 Controle de Fluxo 
 ├── 📂 Funções
-├── 📂 Lista Encadeada
-├── 📂 Matrizes
-├── 📂 Ordenação
-├── 📂 Pilhas
-├── 📂 Tabela de Dispersão
-├── 📂 Tipos Abstratos
-├── 📂 Tipos de Estruturas
 ├── 📂 Vetores e Alocação Dinâmica
+├── 📂 Tipos de Estruturas
+├── 📂 Matrizes 
+├── 📂 Tipos Abstratos
+├── 📂 Lista Encadeada
+├── 📂 Pilhas
+├── 📂 Fila 
+├── 📂 Árvores 
+├── 📂 Arquivos 
+├── 📂 Ordenação
+├── 📂 Busca
+├── 📂 Tabela de Dispersão
 └── 📄 README.md
 ```
 
