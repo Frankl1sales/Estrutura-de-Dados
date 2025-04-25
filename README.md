@@ -34,7 +34,7 @@ A estrutura deste repositório foi inspirada nos capítulos da apostila Estrutur
 └── 📄 README.md
 ```
 
-Para iniciar é recomendado verificar as pastas [Compilador-GCC](Compilador-GCC)
+Para iniciar é recomendado verificar as pastas [Cmake](CMAKE)
 
 ---
 
