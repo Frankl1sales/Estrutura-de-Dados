@@ -42,6 +42,23 @@ static gboolean on_draw(GtkWidget *widget, cairo_t *cr, gpointer user_data) // E
         cairo_fill(cr);
     }
     // Retorna FALSE indicando que o evento de desenho não foi completamente tratado 
-    //(GTK pode continuar o processamento padrão)
+    // (GTK pode continuar o processamento padrão)
     return FALSE;
+}
+
+//  troca de valores entre duas variáveis inteiras
+void swap(int *a, int *b) {
+    int temp = *a;        // Guarda o valor de a em uma variável temporária
+    *a = *b;              // Coloca o valor de b no lugar de a
+    *b = temp;            // Coloca o valor salvo de a no lugar de b
+}
+
+//  força a atualização da interface gráfica para que possamos ver a mudança visual na tela
+//  por exemplo, quando dois elementos são trocados durante a ordenação
+void update_display() {
+    // Processa todos os eventos pendentes para atualizar a tela
+    while (gtk_events_pending()) {
+        gtk_main_iteration();
+    }
+    usleep(50000); // Pausa de 50 milissegundos para visualização 
 }
