@@ -1,8 +1,6 @@
 #include "area.h"
 #include <math.h>
 
-
-
 double area_circulo(double raio) {
     return M_PI * raio * raio;
 }

@@ -31,6 +31,7 @@ Este projeto implementa dois tipos de estruturas de filas em C:
 ```bash
 gcc main.c fila_vetor.c fila_lista.c -o fila
 ./fila
+```
 
 ## 📚 Referência
 

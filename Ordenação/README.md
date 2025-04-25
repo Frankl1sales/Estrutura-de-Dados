@@ -49,7 +49,7 @@ Execução
 
 ## 📝 Exemplo de Saída
 
-- Vetor de inteiros ordenado: 12 25 33 37 48 57 86 92 
+- Vetor de inteiros ordenado: 12 25 33 37 48 57 86 92
 - Vetor de reais ordenado: 12.1 25.6 33.3 37.7 48.3 57.4 86.6 92.8
 - Alunos ordenados por nome: [Ana, Carlos, João, Maria]
 
