@@ -35,9 +35,8 @@ A estrutura deste repositório foi inspirada nos capítulos da apostila Estrutur
 
 Para iniciar é recomendado estudar ou revisitar quando for necessário as pastas [GCC](GCC) e [Cmake](CMAKE) para um entendimento inicial sobre compilação de arquivos C. Logo depois é válido seguir a ordem proposta na [apostila](https://www-usr.inf.ufsm.br/~juvizzotto/elc1067-2013b/estrut-dados-pucrio.pdf). Há uma implementação bonus que em ordenação que serve visualização a ação de alguns desse algoritmos em um conjunto de dados desorganizado inicialmente.
 
+https://github.com/user-attachments/assets/421ff1b4-79ce-4844-9aa7-75f2f1cb13e1
 ![🎥 Clique para assistir à demonstração](visualizaOrden.mp4)
-
-https://github.com/user-attachments/assets/cda0df27-5834-40e4-8dde-4a6ce8bbfa10
 
 ---
 
