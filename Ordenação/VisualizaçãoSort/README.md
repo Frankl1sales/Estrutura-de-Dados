@@ -8,53 +8,52 @@ Este projeto implementa uma interface gráfica para visualizar a execução de t
 - **CMake**: O projeto utiliza o CMake para configuração e construção.
 - **GCC**: Compilador C.
 
-No Ubuntu, você pode instalar o GTK+ 3.0 com o seguinte comando:
+## No Ubuntu, você pode instalar o GTK+ 3.0 com o seguinte comando:
 
 ```bash
 sudo apt-get install libgtk-3-dev
+```
 
-Compilação e Execução
-Passo 1: Clonar o repositório
-
-Clone este repositório para sua máquina:
-
-git clone <URL_DO_REPOSITORIO>
-cd SortSimulator
-
-Passo 2: Configurar o projeto com CMake
+Passo 1: Configurar o projeto com CMake
 
 Crie um diretório de build e configure o projeto com CMake:
 
+```bash
 mkdir build
 cd build
 cmake ..
+```
 
 Passo 3: Compilar o projeto
 
 Compile o projeto utilizando CMake e o GCC:
 
+```bash
 cmake --build .
+```
 
 Ou, se preferir usar o comando direto do GCC (como mencionado na sua solicitação):
 
+```bash
 gcc -o sort_simulator sort_simulator.c $(pkg-config --cflags --libs gtk+-3.0)
+```
 
 Passo 4: Executar o simulador
 
 Após a compilação, execute o simulador:
 
+```bash
 ./sort_simulator
+```
 
 Isso abrirá a janela com a interface gráfica, onde você poderá selecionar o algoritmo de ordenação e visualizar a execução.
 Como Funciona
 
 O simulador permite ao usuário escolher entre três algoritmos de ordenação:
 
-    BubbleSort
-
-    MergeSort
-
-    QuickSort
+- BubbleSort
+- MergeSort
+- QuickSort
 
 Uma vez que o algoritmo é selecionado, o botão "Iniciar Ordenação" executa o algoritmo escolhido e visualiza a ordenação em tempo real.
 Contribuindo
