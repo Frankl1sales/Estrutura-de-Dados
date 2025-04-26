@@ -14,7 +14,7 @@ Este projeto implementa uma interface gráfica para visualizar a execução de t
 sudo apt-get install libgtk-3-dev
 ```
 
-Passo 1: Configurar o projeto com CMake
+### Passo 1: Configurar o projeto com CMake
 
 Crie um diretório de build e configure o projeto com CMake:
 
@@ -24,7 +24,7 @@ cd build
 cmake ..
 ```
 
-Passo 3: Compilar o projeto
+### Passo 2: Compilar o projeto
 
 Compile o projeto utilizando CMake e o GCC:
 
@@ -38,7 +38,7 @@ Ou, se preferir usar o comando direto do GCC (como mencionado na sua solicitaç�
 gcc -o sort_simulator sort_simulator.c $(pkg-config --cflags --libs gtk+-3.0)
 ```
 
-Passo 4: Executar o simulador
+### Passo 3: Executar o simulador
 
 Após a compilação, execute o simulador:
 
@@ -46,8 +46,10 @@ Após a compilação, execute o simulador:
 ./sort_simulator
 ```
 
+## interface gráfica
 Isso abrirá a janela com a interface gráfica, onde você poderá selecionar o algoritmo de ordenação e visualizar a execução.
-Como Funciona
+
+### Como Funciona
 
 O simulador permite ao usuário escolher entre três algoritmos de ordenação:
 
@@ -59,9 +61,10 @@ Uma vez que o algoritmo é selecionado, o botão "Iniciar Ordenação" executa o
 Contribuindo
 
 Se você quiser contribuir para este projeto, sinta-se à vontade para abrir issues e pull requests.
-Licença
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.
+## Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE.md para mais detalhes.
 
 
 ### Explicação do `CMakeLists.txt`:
@@ -74,15 +77,3 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para m
 6. **Criação do executável**: A linha `add_executable(sort_simulator ${SOURCES})` cria o executável a partir dos arquivos de origem.
 7. **Vinculação das bibliotecas**: As bibliotecas GTK+ 3.0 são vinculadas ao executável com as diretivas `target_include_directories` e `target_link_libraries`.
 8. **Flags de compilação adicionais**: Utiliza `target_compile_options` e `target_link_options` para configurar as opções de compilação e vinculação, conforme o `pkg-config`.
-
-### Explicação do `README.md`:
-
-1. **Introdução**: O README fornece uma visão geral do projeto e explica os três algoritmos de ordenação que o simulador pode visualizar.
-2. **Requisitos**: Instruções para instalar o GTK+ 3.0 e outras dependências necessárias no sistema.
-3. **Instruções de Compilação**:
-   - Primeiro, o usuário deve clonar o repositório.
-   - Depois, o projeto deve ser configurado com o CMake, e o código pode ser compilado usando o CMake ou o GCC com as opções do `pkg-config`.
-   - Após a compilação, o simulador pode ser executado.
-4. **Contribuição e Licença**: O README fornece direções sobre como contribuir para o projeto e a licença sob a qual o código está disponibilizado.
-
-Agora, com o `CMakeLists.txt` e o `README.md`, você tem as ferramentas necessárias para configurar, compilar e executar o projeto de simulador de algoritmos de ordenação.
